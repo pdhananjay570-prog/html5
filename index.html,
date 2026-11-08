@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101827">
+<title>Happy Diwali 2026 — Dhananjay</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:22px;background:radial-gradient(ellipse at 50% 25%,#3b2a16,#111827 58%,#070b13);font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#fff5df}
+.card{width:min(100%,520px);text-align:center;padding:28px 22px 24px;border:1px solid #a77c3d;border-radius:25px;background:linear-gradient(155deg,#ffffff0b,#ffffff03);box-shadow:0 25px 90px #0009}
+.kicker{font-size:11px;letter-spacing:.32em;color:#dcb66e}.heading{font-size:clamp(29px,8vw,43px);letter-spacing:.08em;margin:12px 0 4px;color:#f7d58b;text-shadow:0 0 25px #d99a3b55}.sub{font-size:11px;letter-spacing:.2em;color:#c9a96b}
+.lamp{height:190px;display:grid;place-items:center;position:relative;margin:10px 0}.glow{position:absolute;width:145px;height:145px;border-radius:50%;background:#ffae2c;filter:blur(48px);opacity:.22;transition:opacity .5s}.lamp svg{width:225px;position:relative;overflow:visible}
+h2{font-size:21px;color:#f4d38b;margin:4px 0 10px}.message{font-size:14px;line-height:1.8;color:#e4d7bf;max-width:390px;margin:0 auto 20px}
+.statusbox{padding:13px 15px;border:1px solid #b58a4740;background:#ffffff0b;border-radius:14px;text-align:left;color:#e8cb91;font:12px/2 ui-monospace,monospace}.statusbox span{float:right;color:#f7d58b}
+.signature{font-size:23px;color:#f2cf83;margin:20px 0 17px;letter-spacing:.08em}
+.buttons{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.btn{border:0;border-radius:999px;padding:13px 19px;font-weight:700;font-size:14px;cursor:pointer}.gold{background:linear-gradient(120deg,#f7dc9c,#b77b29);color:#211506}.outline{background:#ffffff08;border:1px solid #c99b52;color:#f4d69d}.hint{font-size:11px;color:#d9bd85;min-height:18px;margin-top:14px}
+.spark{position:absolute;inset:0;pointer-events:none;overflow:hidden}.spark i{position:absolute;font-style:normal;color:#ffdb8c;animation:rise 1.8s ease-out forwards}@keyframes rise{to{transform:translateY(-65px) scale(1.4);opacity:0}}
+footer{margin-top:19px;font-size:10px;letter-spacing:.16em;color:#a9916a}
+</style>
+</head>
+<body>
+<main class="card">
+ <div class="kicker">✦ FESTIVAL EDITION 2026 ✦</div>
+ <div class="heading">HAPPY DIWALI</div>
+ <div class="sub">LIGHT UP YOUR WORLD</div>
+ <div class="lamp">
+  <div class="glow" id="glow"></div><div class="spark" id="spark"></div>
+  <svg viewBox="0 0 220 170" aria-label="Glowing diya">
+   <defs><linearGradient id="bowl" x2="0" y2="1"><stop stop-color="#ffe4a0"/><stop offset=".5" stop-color="#c17a24"/><stop offset="1" stop-color="#754015"/></linearGradient><radialGradient id="flame"><stop stop-color="#fff9bd"/><stop offset=".55" stop-color="#ffbd37"/><stop offset="1" stop-color="#ed5918" stop-opacity=".1"/></radialGradient></defs>
+   <ellipse cx="110" cy="139" rx="75" ry="10" fill="#d58c31" opacity=".2"/>
+   <path d="M110 22 C75 66 105 78 110 91 C127 69 145 55 110 22" fill="url(#flame)" stroke="#ffdc8b" stroke-width="1.5"><animate attributeName="d" dur="1.3s" repeatCount="indefinite" values="M110 22 C75 66 105 78 110 91 C127 69 145 55 110 22;M110 28 C89 63 99 78 110 91 C135 65 133 51 110 28;M110 22 C75 66 105 78 110 91 C127 69 145 55 110 22"/></path>
+   <path d="M38 105 Q110 133 182 105 Q168 157 110 158 Q52 157 38 105" fill="url(#bowl)" stroke="#f6d18a" stroke-width="2"/><path d="M43 108 Q110 128 177 108" fill="none" stroke="#fff0bf" stroke-width="2"/><path d="M60 133 Q110 149 160 133" fill="none" stroke="#ffda91" opacity=".65"/>
+  </svg>
+ </div>
+ <h2>May your life shine brighter!</h2>
+ <p class="message">May this festival bring unlimited happiness, prosperity, good health and beautiful new beginnings to you and your family.</p>
+ <div class="statusbox">HAPPINESS.EXE <span>ACTIVE ✓</span><br>PROSPERITY.MODE <span>ON ✓</span><br>NEGATIVITY <span>CLEARED ✓</span><br>BLESSINGS <span>UNLIMITED ∞</span></div>
+ <div class="signature">— Dhananjay —</div>
+ <div class="buttons"><button class="btn gold" id="light">🪔 Light the Diya</button><button class="btn outline" id="share">↗ Share on WhatsApp</button></div>
+ <div class="hint" id="hint" aria-live="polite">Tap the diya to illuminate your celebration ✨</div>
+ <footer>WITH WARM WISHES • DIWALI 2026</footer>
+</main>
+<script>
+const glow=document.getElementById('glow'),spark=document.getElementById('spark'),hint=document.getElementById('hint');let lit=false;
+document.getElementById('light').addEventListener('click',()=>{lit=!lit;glow.style.opacity=lit?'.9':'.22';hint.textContent=lit?'✨ Your world is illuminated. Let happiness shine!':'Tap the diya to illuminate your celebration ✨';if(lit){for(let i=0;i<30;i++){const s=document.createElement('i');s.textContent=['✦','✧','•','✨'][i%4];s.style.left=(5+Math.random()*90)+'%';s.style.top=(15+Math.random()*75)+'%';s.style.fontSize=(12+Math.random()*15)+'px';spark.appendChild(s);setTimeout(()=>s.remove(),1900)}}});
+document.getElementById('share').addEventListener('click',()=>{const text='🪔✨ HAPPY DIWALI 2026 ✨🪔\n\nMay this festival bring unlimited happiness, prosperity, good health and beautiful new beginnings to you and your family.\n\nHAPPINESS.EXE — ACTIVE ✓\nPROSPERITY.MODE — ON ✓\nNEGATIVITY — CLEARED ✓\nBLESSINGS — UNLIMITED ∞\n\nWarm wishes,\n— Dhananjay';const url=location.href;const shareUrl='https://wa.me/?text='+encodeURIComponent(text+'\n\nOpen my interactive Diwali greeting: '+url);if(location.protocol==='file:'){hint.textContent='To share the interactive page, first publish this HTML online (HTTPS). WhatsApp will open with your greeting text now.';window.open('https://wa.me/?text='+encodeURIComponent(text),'_blank')}else{window.open(shareUrl,'_blank','noopener,noreferrer')}});
+</script>
+</body></html>
